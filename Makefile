@@ -116,7 +116,7 @@ shipping.elf : shipping.c shader.h Makefile
 	strip -R .crap $@
 	readelf -S $@
 	#remove section header
-	./Section-Header-Stripper/section-stripper.py $@
+	python3 Section-Header-Stripper/section-stripper.py $@
 
 shipping_unpacked : shipping.elf
 	
@@ -133,9 +133,9 @@ shipping : shipping_opt.elf.packed
 %.xz : % Makefile
 	-rm $@
 	# ./megalania $< > $@
-	./nicer.py $< -o $@
+	python3 nicer.py $< -o $@
 	#lzma --format=lzma -9 --extreme --lzma1=preset=9,lc=0,lp=0,pb=0,nice=40,depth=32,dict=16384 --keep --stdout $< > $@
-	./LZMA-Vizualizer/LzmaSpec $@
+	#./LZMA-Vizualizer/LzmaSpec $@
 
 %.packed : %.xz packer Makefile
 	cat ./vondehi/vondehi $< > $@
@@ -145,4 +145,4 @@ clean :
 	-rm *.elf *.xz shader.h shipping shipping_unpacked screenshot.jpg shipping.zip
 
 check_size :
-	./sizelimit_check.sh
+	sh ./sizelimit_check.sh
