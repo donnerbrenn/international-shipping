@@ -1,0 +1,38 @@
+|                                      |
+| ------------------------------------ |
+| // INTERNATIONAL SHIPPING ////////// |
+| ------------------------------------ |
+|  a 4k gfx demo by Suricrasia Online  |
+|          for Ubuntu 18.10            |
+| Revision 2019 @ Saarbrücken, Germany |
+| ------------------------------------ |
+| libs needed: -lGL -lgtk-3 -lgdk-3    |
+|   -lglib-2.0 -lgobject-2.0 -lfftw3f  |
+| ------------------------------------ |
+| Execution instructions:              |
+|                                      |
+| ~$ ./shipping                        |
+|                                      |
+| or, to choose the number of samples: |
+|                                      |
+| ~$ env SAMPLES=10 ./shipping         |
+|                                      |
+| By default the # of samples is 1000. |
+| ------------------------------------ |
+| Use the shipping_unpacked executable |
+| if the 4k version won't exec on your |
+| your machine, as it is possible that |
+| the packer is incompatible with your |
+| system. Happy rendering!             |
+| ------------------------------------ |
+| Pressing "esc" or "alt-f4" will quit |
+| immediately. below are the rendering |
+| times for two different gfx cards:   |
+| ------------------------------------ |
+| SAMPLES | Quadro K1000M | GTX 980 Ti |
+|       1 |         0.9 s |      1.2 s |
+|      10 |         2.9 s |      1.3 s |
+|     100 |        17.2 s |      2.3 s |
+|    1000 |       165.6 s |     12.2 s |
+| ------------------------------------ |
+|                                      |
