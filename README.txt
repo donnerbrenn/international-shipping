@@ -1,4 +1,5 @@
-International Shipping is a 4k gfx demo for 64-bit linux, specifically targeting Ubuntu 18.10.
+International Shipping is a 4k gfx demo by Blackle for 64-bit linux, specifically targeting Ubuntu 18.10.
+This is my version of the thing. I tried to reduce the size of the binary further.
 
 Packages needed:
 (all of these are by default installed on Ubuntu after installing NVidia drivers.)
