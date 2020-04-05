@@ -68,10 +68,8 @@ CFLAGS+= -Wl,-z,noseparate-code
 CFLAGS+= -Wl,--hash-style=sysv
 CFLAGS+= -Wl,--whole-archive
 CFLAGS+= -Wl,--print-gc-sections
-# LDFLAGS+=-Wl,-z,max-page-size=4096
-
 CFLAGS+=-T linker.ld
-# LDFLAGS+=-Wl,-z,max-page-size=4096
+
 
 .PHONY: clean check_size
 
